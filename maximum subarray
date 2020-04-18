@@ -1,0 +1,58 @@
+ #include <stdio.h>
+int main{
+ 
+        int i, j, a, n, number[30],u=1,k,z=0,numsize;
+        printf("Enter the value of N and number size\n");
+        scanf("%d%d", &n,&numsize);
+ 
+        printf("Enter the numbers \n");
+        for (i = 1; i <= n; ++i)
+            scanf("%d", &number[i]);
+ 
+        for (i = 1; i <= n; ++i) 
+        {
+ 
+            for (j = i + 1; j <= n; ++j)
+            {
+ 
+                if (number[i] > number[j] ) 
+                {
+ 
+                    a =  number[i];
+                    number[i] = number[j];
+                    number[j] = a;
+ 
+                }
+ 
+            }
+ 
+        }
+ 
+        for(i = 1; i <= n; i++)
+    {
+        for(j = i+1; j <= n; )
+        {
+            if(number[j] == number[i])
+            {
+                for(k = j; k <= n; k++)
+                {
+                    number[k] = number[k+1];
+                }
+                n--;
+            }
+            else
+            {
+                j++;
+            }
+        }
+    }
+
+    for(i = 1; i <= numsize; i++)
+    { 
+         z+=number[i];
+        
+    }   printf("%d",z);
+    }
+
+return 0;
+}
