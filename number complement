@@ -28,3 +28,34 @@ int main()
 	} printf("%d",result);
 	return 0;
 }
+
+
+
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int N,a,i=0,r=0,c,s;
+	scanf("%d",&N);
+	if(N!=0)
+	{
+   	while(N!=0)
+    {
+		a = N%2;
+		N = N/2;
+		if(a==0){
+			c=a +1;
+		}
+		else
+		   {
+		   	  c=a-1;
+		   }
+		   r+= pow(2,i)*c;
+		i++;
+	}
+	}
+	else
+	    r=1;
+	  printf("%d\n",r);
+	return 0;
+}
