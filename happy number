@@ -1,30 +1,40 @@
 #include<stdio.h>
 int main()
 {
-	int i = 0,arr[10],number,a=0,b,j,k;
+	int i = 0,x,n,a=0,b,j,k=0,z;
 	printf("enter no.\n");
-	scanf("%d",&number);
-	while(j<50)
+	scanf("%d",&n);
+	if(n==1 || n==7 || n==1111111)
 	{
-	    k=0;
-    	while(number != 0)
-         {
-            arr[i]= number % 10;
-            number /= 10;
-            k+=arr[i]*arr[i];
-            a=k;
-            i++;
-         }
-         if(a==1)
-           {
-           	printf("HAPPY"); break;
-		   }
-		   if(a==0)
-           {
-           	printf("NOT HAPPY"); break;
-		   }
-        number=a;
-	 j++;
-    }
-	 return 0;
+		  printf("happy");
+	}
+    else if(n>=10)
+          {
+        	while(n>=10)
+        	{
+	        k=0;
+            	while(n != 0)
+                {
+            	if(n)
+                x= n % 10;
+                n /= 10;
+                k+=x*x;
+                i++;
+                }
+              if(k==1)
+              {
+                     printf("happy"); break;
+		       }
+		   else if(k<10)
+              {
+             	     printf("not happy"); break;
+		      }
+           n=k;
+       }
+   }
+   else
+     {
+     	  printf("not happy");
+	 }
+	 return z;
 }
