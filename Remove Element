@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+	int nums[100],numsSize,val,i,j=0;
+	scanf("%d",&numsSize);
+	for(i=0;i<numsSize;i++)
+	{
+		scanf("%d",&nums[i]);
+	}
+	printf("enter\n");
+	scanf("%d",&val);
+	 for(i=0;i<numsSize;i++)
+	{
+	    if(nums[i]!=val)
+		{
+            printf("%d,",nums[i]);
+            nums[j]=nums[i];
+            j++;
+			}	
+	}
+    return j;
+}
