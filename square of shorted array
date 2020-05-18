@@ -1,0 +1,48 @@
+#include<stdio.h>
+void solve(){
+	int* A[100],returnSize;
+	int i,ASize,j,a;
+	scanf("%d",&ASize);
+	for(i=0;i<ASize;i++)
+	{
+		scanf("%d",&ASize);
+	}
+	 scanf("%d",&returnSize);
+    for(i=0;i<ASize;i++)
+	{
+		a = (int)A[i];
+		a=a*a;
+		*A[i]=a;
+	} 
+	for (i = 0; i < ASize; ++i) 
+        {
+ 
+            for (j = i + 1; j < ASize; ++j)
+            {
+ 
+                if (A[i] > A[j] ) 
+                {
+ 
+                    a =  (int)A[i];
+                   A[i] = A[j];
+                    *A[j] = a;
+ 
+                }
+ 
+            }
+ 
+        } returnSize = ASize;
+        for(i=0;i<ASize;i++)
+        {
+        	printf("%d ",A[i]);
+           
+        }
+}
+int main(){
+	#ifndef ONLINE_JUDGE
+    freopen("input4.txt", "r", stdin);
+    freopen("output5.txt", "w", stdout);
+	#endif
+	solve();
+	return 1;
+}
